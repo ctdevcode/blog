@@ -1,16 +1,2 @@
 <h4 class="mb-2 text-center">Viewing Post:</h4>
-<div class="container-sm">
-	<div class="card">
-		<div class="card-header">
-			<div class="row justify-content-center">
-				<div class="col-2">
-						<p>USER PROFILE</p>
-				</div>
-				<div class="col-10">
-					<strong>Title: </strong><%= @post.title %><br>
-					<strong>Body: </strong><%= @post.body %><br>
-				</div>	
-			</div>
-		</div>
-	</div>
-</div>
+<%= render 'post_card' %>
