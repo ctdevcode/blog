@@ -12,7 +12,8 @@
 
   <body>
 		<%= render 'layouts/navigation' %>
-		<div class="container-fluid py-4" id="page-content">
+		<div class="container-fluid py-5" id="page-content">
+      <%= render 'layouts/messages' %>
 			<%= yield %>
 		</div>
   </body>

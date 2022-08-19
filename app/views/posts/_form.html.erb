@@ -1,0 +1,13 @@
+<%= form_with(model: @post, local:true) do |f| %>
+	<p>
+		<%= f.label :title, "Title:" %><br>
+		<%= f.text_field :title, :size=>"51", placeholder: "Title your post", autofocus: true %>
+	</p>
+	<p>
+		<%= f.label :body, "Body:" %><br>
+		<%= f.text_area :body, placeholder: "Whats on your mind?", cols: 53, rows: 10 %>
+	</p>
+	<p class="d-flex justify-content-center">
+		<%= f.submit "Submit", class: "btn btn-outline-success" %>
+	</p>
+<% end %>

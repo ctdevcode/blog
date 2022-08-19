@@ -4,12 +4,22 @@ class PostsController < ApplicationController
   end
 
   def index
+		@post = Post.all
   end
 
   def new
+		@post = Post.new
   end
 
   def create
+		@post = Post.create(params.require(:post).permit(:title, :body))
+		if @post.save
+			flash[:notice] = "Post was created successfully!"
+			redirect_to @post
+		else 
+			flash.now[:alert] = "Post was not created"
+			render 'new'
+		end
   end
 
   def edit
@@ -20,4 +30,8 @@ class PostsController < ApplicationController
 
   def destroy
   end
+
+	def timeline
+		@posts = Post.all
+	end
 end

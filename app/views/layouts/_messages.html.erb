@@ -1,0 +1,17 @@
+<div class="container d-flex justify-content-center">
+	<% if notice %>
+		<div class='alert alert-success'>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			<%= notice %>
+		</div>
+	<% end %>
+	<% if alert %>
+		<div class='alert alert-danger'>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			<%= alert %>
+			<div class="div mt-2">
+				<%= render 'shared/errors', obj: @obj %>
+			</div>
+		</div>
+	<% end %> 
+</div>
